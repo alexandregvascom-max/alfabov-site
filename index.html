@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AlfaBov Saúde Animal</title>
+<meta name="description" content="AlfaBov Saúde Animal — nutrição e desempenho que transformam a pecuária. Aditivos de alta qualidade para bovinos, da cria, recria e engorda. Referência em Rondônia, presente em todo o Brasil.">
+<link rel="icon" href="img/logo-alfabov.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0E3A21;--green:#17773A;--green2:#1F8F47;--lime:#B4CC2B;--lime-soft:#E9F1C4;
+  --black:#141714;--gold:#F2A51C;--navy:#26235E;--sky:#1E9BD7;
+  --bg:#F6F6F1;--paper:#fff;--ink:#141714;--muted:#5A635C;--line:rgba(20,23,20,.1);
+  --wa:#1FAF5A;--r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:112px}
+body{font-family:'Figtree',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.08;letter-spacing:-.02em}
+.bgimg{background:var(--deep) center/cover no-repeat}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:15px;font-family:inherit;border:0;cursor:pointer;transition:transform .15s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:0 0 18px}
+.btn-lime{background:var(--lime);color:var(--deep)}
+.btn-lime:hover{background:#C4DB3A;box-shadow:0 12px 26px rgba(180,204,43,.35)}
+.btn-line{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#19994E;box-shadow:0 12px 26px rgba(31,175,90,.35)}
+.btn-dark{background:var(--deep);color:#fff}
+.btn-dark:hover{background:var(--green)}
+.note{display:inline-block;font-size:12px;font-weight:700;color:#8A5A10;background:#FCEBC6;border-radius:6px;padding:2px 9px;vertical-align:middle}
+
+/* header */
+.topbar{background:var(--black);color:rgba(255,255,255,.75);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar b{color:var(--lime);font-weight:600}
+.topbar a:hover{color:var(--lime)}
+.topbar .r{display:flex;gap:22px}
+header{overflow-anchor:none;position:sticky;top:0;z-index:80;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:104px;gap:20px}
+.brand{display:flex;align-items:center;gap:16px}
+.brand img{width:84px;height:84px;border-radius:50%;image-rendering:-webkit-optimize-contrast;filter:drop-shadow(0 4px 10px rgba(14,58,33,.25))}footer .brand img{width:96px;height:96px}@media(max-width:760px){.brand img{width:64px;height:64px}footer .brand img{width:84px;height:84px}}
+.brand b{font-family:'Montserrat';font-style:italic;font-weight:900;font-size:26px;letter-spacing:-.01em;display:block;line-height:1}
+.brand small{font-family:'Montserrat';font-style:italic;font-weight:800;font-size:11.5px;color:var(--green);letter-spacing:.04em}
+.menu{display:flex;gap:28px}
+.menu a{font-weight:600;font-size:15px;color:var(--muted);padding:6px 0;position:relative}
+.menu a:hover,.menu a.on{color:var(--deep)}
+.menu a.on::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;border-radius:3px;background:var(--lime)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--deep);margin:6px 10px;border-radius:2px}
+
+/* hero */
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--deep)}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1716819487547-913db6986792?auto=format&fit=crop&w=2200&q=80');background-size:cover;background-position:center 65%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(9,40,22,.95) 0%,rgba(9,40,22,.8) 45%,rgba(9,40,22,.35) 100%)}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:80px;padding-bottom:60px}
+.tag{display:inline-flex;align-items:center;gap:10px;background:rgba(180,204,43,.16);border:1px solid rgba(180,204,43,.45);color:var(--lime);padding:8px 16px;border-radius:999px;font-size:13.5px;font-weight:700}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--lime)}
+.hero h1{font-style:italic;font-weight:900;font-size:clamp(38px,5.4vw,70px);margin:0 0 20px;text-transform:uppercase;line-height:1.02}
+.hero h1 span{display:block;color:var(--lime)}
+.hero p{font-size:18.5px;color:rgba(255,255,255,.84);max-width:560px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.bag{position:relative;justify-self:center;width:100%;max-width:380px}
+.bag img{width:100%;border-radius:22px;box-shadow:0 40px 80px rgba(0,0,0,.45)}
+.bag .chip{position:absolute;background:#fff;color:var(--deep);border-radius:14px;padding:12px 16px;box-shadow:0 16px 36px rgba(0,0,0,.25);font-size:13px;font-weight:600;display:flex;gap:10px;align-items:center}
+.bag .chip b{font-family:'Montserrat';font-weight:900;font-size:18px;display:block;line-height:1.1}
+.bag .chip.c1{left:-40px;top:18%}
+.bag .chip.c2{right:-30px;bottom:14%}
+.bag .chip .ico{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;flex:0 0 36px}
+.hstats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.14)}
+.hstats div{padding:26px 24px}
+.hstats div+div{border-left:1px solid rgba(255,255,255,.14)}
+.hstats b{font-family:'Montserrat';font-weight:900;font-style:italic;font-size:30px;color:var(--lime);display:block;line-height:1.1}
+.hstats span{font-size:13.5px;color:rgba(255,255,255,.72)}
+
+/* section base */
+section{padding:110px 0}
+.head{max-width:720px;margin-bottom:54px}
+.head.c{margin-left:auto;margin-right:auto;text-align:center}
+.kick{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:13.5px;color:var(--green);margin-bottom:14px;font-family:'Montserrat';font-style:italic}
+.kick::before{content:"";width:26px;height:4px;border-radius:4px;background:var(--lime)}
+.head h2{font-size:clamp(30px,4vw,48px);font-weight:900;color:var(--deep)}
+.head p{margin-top:16px;font-size:17px;color:var(--muted)}
+
+/* sobre */
+.sobre{background:var(--bg)}
+.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.sobre-copy p{font-size:16.5px;color:var(--muted);margin-bottom:16px}
+.sobre-copy p strong{color:var(--deep)}
+.sobre-quote{margin:26px 0 30px;padding:20px 24px;border-left:5px solid var(--lime);background:#fff;border-radius:0 14px 14px 0;font-family:'Montserrat';font-style:italic;font-weight:800;font-size:18px;color:var(--deep);line-height:1.35}
+.sobre-media{position:relative;height:560px}
+.sobre-media .m1{position:absolute;inset:0 18% 14% 0;border-radius:22px;background-image:url('https://images.unsplash.com/photo-1577412032138-bbf147ceb80b?auto=format&fit=crop&w=1300&q=80')}
+.sobre-media .m2{position:absolute;right:0;bottom:0;width:48%;height:46%;border-radius:22px;border:8px solid var(--bg);background-image:url('https://images.unsplash.com/photo-1563308294-6d63bb78d61e?auto=format&fit=crop&w=900&q=80')}
+.sobre-media .selo-rs{position:absolute;left:22px;bottom:34px;background:var(--deep);color:#fff;border-radius:16px;padding:16px 20px;box-shadow:0 18px 40px rgba(0,0,0,.25);max-width:230px}
+.sobre-media .selo-rs b{display:block;font-family:'Montserrat';font-style:italic;font-weight:900;font-size:20px;color:var(--lime);line-height:1.1}
+.sobre-media .selo-rs span{font-size:13px;color:rgba(255,255,255,.8)}
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:30px}
+.pilares div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center}
+.pilares b{display:block;font-family:'Montserrat';font-weight:900;font-style:italic;color:var(--green);font-size:15px}
+.pilares span{font-size:12.5px;color:var(--muted)}
+@media(max-width:1080px){.sobre-grid{grid-template-columns:1fr;gap:44px}.sobre-media{height:420px}}
+@media(max-width:760px){.pilares{grid-template-columns:1fr}.sobre-media{height:340px}}
+/* benefícios */
+.benef{padding:0;background:#fff}
+.benef-top{padding-top:90px;padding-bottom:50px}
+.bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.bitem{border-radius:var(--r);padding:28px 24px;background:var(--bg);border:1px solid var(--line)}
+.bitem .ic{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px}
+.bitem .ic svg{width:26px;height:26px}
+.bitem h3{font-size:19px;color:var(--deep);margin-bottom:8px}
+.bitem p{font-size:14.5px;color:var(--muted)}
+.band{height:clamp(280px,36vw,480px);background-size:cover;background-position:center 30%;position:relative}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,0) 22%)}
+
+/* método */
+.metodo{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.metodo-img{position:relative;height:620px;border-radius:24px;background-image:url('https://images.unsplash.com/photo-1566310203664-bb0828838943?auto=format&fit=crop&w=1300&q=80')}
+.metodo-img .badge{position:absolute;right:-26px;bottom:40px;background:var(--lime);color:var(--deep);padding:20px 24px;border-radius:18px;box-shadow:0 20px 40px rgba(14,58,33,.25);max-width:220px}
+.metodo-img .badge b{font-family:'Montserrat';font-weight:900;font-style:italic;font-size:40px;display:block;line-height:1}
+.metodo-img .badge span{font-weight:700;font-size:14px}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}@media(max-width:900px){.steps{grid-template-columns:1fr}}
+.step{display:flex;gap:20px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:border-color .2s,box-shadow .2s}
+.step:hover{border-color:var(--lime);box-shadow:0 14px 30px rgba(14,58,33,.08)}
+.step .n{flex:0 0 52px;height:52px;border-radius:14px;background:var(--deep);color:var(--lime);font-family:'Montserrat';font-weight:900;font-style:italic;font-size:20px;display:grid;place-items:center}
+.step h3{font-size:19px;color:var(--deep);margin-bottom:6px}
+.step p{font-size:15px;color:var(--muted)}
+
+/* vídeo */
+.video{position:relative;color:#fff;overflow:hidden;background:var(--deep)}
+.video .vbg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1589248529232-69c286cf2cb4?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:center;opacity:.35}
+.video .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center}
+.video .head h2{color:#fff}.video .head p{color:rgba(255,255,255,.78)}.video .kick{color:var(--lime)}
+.vbox{aspect-ratio:16/9;border-radius:22px;border:2px dashed rgba(255,255,255,.4);background:rgba(14,58,33,.55);backdrop-filter:blur(6px);display:grid;place-items:center;text-align:center;padding:20px}
+.vbox .play{width:84px;height:84px;border-radius:50%;background:var(--lime);display:grid;place-items:center;margin:0 auto 16px;box-shadow:0 0 0 12px rgba(180,204,43,.2)}
+.vbox .play svg{width:32px;height:32px;fill:var(--deep);margin-left:5px}
+.vbox b{font-family:'Montserrat';font-size:19px}
+.vbox span{display:block;font-size:13.5px;color:rgba(255,255,255,.66);margin-top:4px}
+
+/* diferenciais */
+.dif{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dcard{background:#fff;border-radius:var(--r);padding:30px;border:1px solid var(--line);position:relative;overflow:hidden}
+.dcard.feat{grid-row:span 2;background:var(--deep);color:#fff;padding:0;display:flex;flex-direction:column}
+.dcard.feat .dimg{flex:1;min-height:260px;background-image:url('https://images.unsplash.com/photo-1577412032138-bbf147ceb80b?auto=format&fit=crop&w=1000&q=80')}
+.dcard.feat .dtx{padding:30px}
+.dcard.feat h3{color:#fff}.dcard.feat p{color:rgba(255,255,255,.75)}
+.dcard .ic{width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px}
+.dcard .ic svg{width:24px;height:24px}
+.dcard h3{font-size:19.5px;color:var(--deep);margin-bottom:8px}
+.dcard p{font-size:14.5px;color:var(--muted)}
+.dcard .pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.dcard .pills span{font-size:11.5px;font-weight:700;background:var(--lime-soft);color:var(--deep);padding:4px 10px;border-radius:999px}
+
+/* soluções */
+.sol{background:#fff}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.fbtn{border:1.5px solid var(--line);background:var(--bg);padding:10px 20px;border-radius:999px;font-weight:700;font-size:14px;color:var(--muted);cursor:pointer;font-family:inherit;transition:.2s}
+.fbtn:hover{border-color:var(--green);color:var(--deep)}
+.fbtn.on{background:var(--deep);color:#fff;border-color:var(--deep)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prod{background:var(--bg);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.prod:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(14,58,33,.12)}
+.prod.hide{display:none}
+.plogo{background:#fff;height:170px;display:grid;place-items:center;padding:22px 26px;border-bottom:1px solid var(--line);position:relative}
+.plogo img{max-height:118px;width:auto;object-fit:contain}
+.plogo .txtlogo{font-family:'Montserrat';font-weight:900;font-size:40px;line-height:.9;text-align:left;letter-spacing:-.02em}
+.plogo .kg{position:absolute;right:14px;top:14px;background:var(--deep);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.pbody{padding:24px;flex:1;display:flex;flex-direction:column}
+.pcat{font-size:12px;font-weight:800;color:var(--green);margin-bottom:6px;font-family:'Montserrat';font-style:italic}
+.pbody h3{font-size:20px;color:var(--deep);margin-bottom:8px}
+.pbody>p{font-size:14.5px;color:var(--muted);margin-bottom:14px}
+.pbody ul{list-style:none;margin-bottom:16px}
+.pbody li{font-size:14px;padding:4px 0 4px 24px;position:relative}
+.pbody li::before{content:"";position:absolute;left:0;top:8px;width:14px;height:14px;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E3A21' stroke-width='4'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/9px no-repeat}
+.uso{background:#fff;border-left:4px solid var(--lime);border-radius:10px;padding:12px 14px;font-size:13.5px;color:var(--ink);margin-bottom:14px}
+.uso b{display:block;font-size:12px;color:var(--green);font-family:'Montserrat';font-style:italic;margin-bottom:2px}
+details.gar{margin-top:auto;border-top:1px solid var(--line);padding-top:12px}
+details.gar summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--deep);list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.gar summary::-webkit-details-marker{display:none}
+details.gar summary::after{content:"+";font-size:20px;color:var(--green);font-weight:700}
+details.gar[open] summary::after{content:"–"}
+details.gar table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+details.gar td{padding:6px 0;border-bottom:1px dashed var(--line)}
+details.gar td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+.pcta{display:flex;gap:10px;margin-top:16px}
+.pcta a{flex:1;padding:12px;font-size:14px}
+
+/* faixa cta */
+.cta-band{position:relative;overflow:hidden;color:#fff;padding:0}
+.cta-band .cbg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1594987057733-1fb3fe5707c9?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:center}
+.cta-band::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(9,40,22,.94),rgba(9,40,22,.6))}
+.cta-band .wrap{position:relative;z-index:2;padding:90px 28px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta-band h2{font-style:italic;font-weight:900;font-size:clamp(28px,3.6vw,44px);max-width:640px;text-transform:uppercase}
+.cta-band h2 span{color:var(--lime)}
+
+/* resultados */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.stars{color:var(--gold);letter-spacing:3px;font-size:16px}
+.tcard p{margin:14px 0 22px;font-size:15.5px}
+.who{display:flex;gap:12px;align-items:center}
+.who .av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font-family:'Montserrat';font-weight:800}
+.who b{display:block;font-size:14.5px}.who span{font-size:13px;color:var(--muted)}
+
+/* faq */
+.faqwrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;padding:20px 22px}
+.faq summary{cursor:pointer;font-weight:700;font-size:16px;color:var(--deep);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:var(--green);line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:12px;color:var(--muted);font-size:15px}
+
+/* whatsapp + contato */
+.contato{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.contato .head h2{color:#fff}.contato .head p{color:rgba(255,255,255,.75)}.contato .kick{color:var(--lime)}
+.cgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px}
+.walist{display:grid;gap:12px;margin-bottom:28px}
+.walink{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:16px 18px;transition:.2s}
+.walink:hover{background:rgba(255,255,255,.14);transform:translateX(5px)}
+.walink .wic{width:46px;height:46px;border-radius:13px;background:var(--wa);display:grid;place-items:center;flex:0 0 46px}
+.walink .wic svg{width:24px;height:24px;fill:#fff}
+.walink b{display:block;font-family:'Montserrat';font-size:16px}
+.walink span{font-size:13px;color:rgba(255,255,255,.66)}
+.walink .go{margin-left:auto;color:var(--lime);font-weight:700;font-size:14px}
+.cinfo{display:grid;gap:14px}
+.crow{display:flex;gap:14px;align-items:flex-start}
+.crow .ci{width:40px;height:40px;border-radius:11px;background:rgba(180,204,43,.15);display:grid;place-items:center;flex:0 0 40px}
+.crow .ci svg{width:19px;height:19px;stroke:var(--lime)}
+.crow small{display:block;font-size:12px;color:rgba(255,255,255,.55);font-weight:600}
+.crow b{font-size:15px;font-weight:600}
+.crow em{font-style:normal;font-size:11.5px;color:#F6D98E;display:block}
+.cform{background:#fff;color:var(--ink);border-radius:24px;padding:38px}
+.cform h3{font-size:24px;color:var(--deep);margin-bottom:6px}
+.cform>p{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{margin-bottom:14px}
+.f label{display:block;font-size:13px;font-weight:700;color:var(--deep);margin-bottom:6px}
+.f input,.f select,.f textarea{width:100%;border:1.5px solid var(--line);background:var(--bg);border-radius:12px;padding:12px 14px;font-family:inherit;font-size:15px;color:var(--ink)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--green);background:#fff}
+.f textarea{min-height:100px;resize:vertical}
+.cform .btn{width:100%}
+
+footer{background:#081F12;color:rgba(255,255,255,.62);padding:64px 0 28px}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:36px}
+footer .brand b{color:#fff}
+footer h5{font-family:'Montserrat';color:#fff;font-size:15px;margin-bottom:14px}
+footer li{list-style:none;padding:4px 0;font-size:14px}
+footer li a:hover{color:var(--lime)}
+.selo{display:inline-flex;gap:10px;align-items:center;margin-top:18px;border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:10px 14px;font-size:12.5px}
+.selo b{color:#fff;display:block;font-size:13px}
+.fbot{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
+
+.wa-float{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:90;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 30px rgba(31,175,90,.45);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+
+@media(max-width:1080px){
+  .hero-in,.metodo,.video .wrap,.faqwrap,.cgrid{grid-template-columns:1fr}
+  .bag{max-width:320px}
+  .bgrid{grid-template-columns:repeat(2,1fr)}
+  .pgrid,.dif,.tgrid{grid-template-columns:repeat(2,1fr)}
+  .dcard.feat{grid-row:auto;grid-column:span 2}
+  .metodo-img{height:440px}
+  .metodo-img .badge{right:20px}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .hstats{grid-template-columns:repeat(2,1fr)}
+  .hstats div:nth-child(3){border-left:0}
+  .hstats div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.14)}
+}
+@media(max-width:760px){
+  .topbar .l{display:none}.topbar .wrap{justify-content:center}
+  .menu{position:fixed;top:104px;left:0;right:0;background:#fff;flex-direction:column;padding:22px 28px 30px;gap:12px;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:transform .3s;z-index:70}
+  .menu.open{transform:none}
+  .burger{display:block}.nav-cta{display:none}
+  .bgrid,.pgrid,.dif,.tgrid,.row2,.fgrid{grid-template-columns:1fr}
+  .dcard.feat{grid-column:auto}
+  section{padding:76px 0}
+  .bag .chip.c1{left:-10px}.bag .chip.c2{right:-10px}
+  .cform{padding:28px 22px}
+  .hero-in{padding-top:50px}.hero h1{font-size:34px}.hstats b{font-size:24px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.pgrid{grid-template-columns:repeat(2,1fr)!important;gap:26px}
+.plabel{display:block;width:100%;border:0;padding:0;background:#fff;cursor:zoom-in;position:relative;border-bottom:1px solid var(--line)}
+.plabel img{width:100%;height:auto;display:block}
+.plabel .zoom{position:absolute;right:12px;bottom:12px;background:rgba(14,58,33,.88);color:#fff;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;font-family:inherit}
+.ptag{font-family:'Montserrat';font-style:italic;font-weight:800;color:var(--green);font-size:15px;margin-bottom:10px!important}
+.pdesc{font-size:14px;color:var(--muted);margin-bottom:14px}
+.pind{font-size:14px;color:var(--ink);margin-bottom:12px}
+.pind b{display:block;font-size:12px;color:var(--green);font-family:'Montserrat';font-style:italic;margin-bottom:2px}
+.lbx{position:fixed;inset:0;z-index:200;background:#06170D;display:none;flex-direction:column}
+.lbx.on{display:flex}
+.lbx-bar{display:flex;align-items:center;gap:8px;padding:12px;color:#fff;flex:0 0 auto}
+.lbx-bar span{font-weight:700;font-size:14px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lbx-bar button{flex:0 0 42px;width:42px;height:42px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;font-size:24px;font-weight:700;cursor:pointer;line-height:1}
+.lbx-bar button:hover{background:rgba(255,255,255,.2)}
+.lbx-bar .zl{font-size:13px;min-width:48px;text-align:center;opacity:.8;flex:0 0 auto}
+.lbx-stage{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y;text-align:center}
+.lbx-stage img{display:inline-block;max-width:none;height:auto;background:#fff;border-radius:8px;margin:10px;user-select:none;-webkit-user-drag:none}
+.lbx-hint{color:rgba(255,255,255,.65);font-size:12.5px;text-align:center;padding:8px 12px 14px;flex:0 0 auto}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr!important}}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr!important}}
+footer li,footer a{overflow-wrap:anywhere}
+html,body{overflow-x:clip!important}
+@media(max-width:760px){.nav{height:88px}.menu{top:88px!important}.brand{gap:12px}.brand b{font-size:22px}}
+
+/* topo ampliado */
+header .nav{height:176px;transition:height .25s ease}
+header .brand img{width:136px;height:136px;transition:width .25s ease,height .25s ease}
+header .brand{gap:24px}
+header .brand b{font-size:36px}
+header .brand small{font-size:15px}
+.brand-tag{display:block;margin-top:8px;padding-left:12px;border-left:3px solid var(--lime);font-style:normal;font-weight:600;font-size:16.5px;color:var(--muted);max-width:310px;line-height:1.35;transition:opacity .2s ease}
+header.compact .nav{height:72px}
+header.compact .brand img{width:52px;height:52px}
+header.compact .brand-tag{display:none}
+html{scroll-padding-top:108px!important}
+@media(max-width:1100px){.brand-tag{max-width:230px;font-size:14.5px}}
+@media(max-width:760px){
+ header .nav{height:146px}header .brand img{width:102px;height:102px}header .brand{gap:12px}
+ header .brand b{font-size:25px}header .brand small{font-size:12px}
+ .brand-tag{font-size:14.5px;margin-top:6px;padding-left:8px;max-width:205px}
+ header .wrap.nav{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(10px,env(safe-area-inset-right,0px));gap:6px}header .brand{gap:10px}.burger{width:40px}
+ header.compact .nav{height:66px}header.compact .brand img{width:46px;height:46px}
+ .menu{top:var(--navh,146px)!important}
+ .menu:not(.open){visibility:hidden;transform:translateY(-110%)!important;border-bottom-color:transparent}
+ .menu{transition:transform .3s,visibility .3s}
+}
+@media(prefers-reduced-motion:reduce){header .nav,header .brand img{transition:none}}
+
+/* topo fixo: o espaço reservado não muda, então a página não pula ao encolher */
+header{position:fixed!important;top:0;left:0;right:0}
+body{padding-top:176px}
+@media(max-width:760px){body{padding-top:146px}}
+
+header .brand b,header .brand small{transition:font-size .25s ease}
+header.compact .brand b{font-size:24px}header.compact .brand small{font-size:11.5px}
+header.compact .brand{gap:14px}
+@media(max-width:760px){header.compact .brand b{font-size:19px}header.compact .brand small{font-size:10.5px}header.compact .brand{gap:10px}}
+html{scroll-padding-top:84px!important}
+
+.brand-name{display:inline-flex;flex-direction:column;align-items:center}
+.brand-name small{display:block;text-align:center;transform:translateX(-.4em)}
+
+.brand-tag{text-wrap:balance}
+.tag-short{display:none}
+@media(max-width:760px){.tag-long{display:none}.tag-short{display:inline}.brand-tag{max-width:none!important;padding-left:8px;margin-left:0}}
+.burger{flex:0 0 44px!important;width:44px!important}
+header .brand{min-width:0}
+@media(max-width:375px){header .brand img{width:88px;height:88px}.brand-tag{font-size:13px!important}}
+.tag-short{white-space:nowrap}
+
+/* ===== páginas ===== */
+.view{display:none}
+.view.on{display:block;animation:vin .28s ease}
+@keyframes vin{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.view.on{animation:none}}
+.menu a.on{color:var(--deep)}
+.menu a.on::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;border-radius:3px;background:var(--lime)}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.btn-ghost-dark{border:1.5px solid var(--deep);color:var(--deep)}
+.btn-ghost-dark:hover{background:var(--deep);color:#fff}
+/* cartões de produto */
+.cgrid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;color:inherit}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,58,33,.12);border-color:var(--lime)}
+.pcard.hide{display:none}
+.pthumb{aspect-ratio:16/9;background:#fff;border-bottom:1px solid var(--line);overflow:hidden;display:grid;place-items:center}
+.pthumb img{width:100%;height:100%;object-fit:cover;object-position:left center}
+.pcbody{padding:18px 18px 20px;display:flex;flex-direction:column;gap:4px;flex:1}
+.pcbody h3{font-size:19px;color:var(--deep)}
+.pcbody p{font-size:14px;color:var(--muted);flex:1}
+.pmore{margin-top:10px;font-weight:800;font-size:14px;color:var(--green)}
+.pcard:hover .pmore{color:var(--deep)}
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.destaque{background:#fff}
+.mini-cta{padding-top:0;background:#fff}
+.mc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.mcard{display:flex;flex-direction:column;gap:6px;padding:26px;border-radius:18px;background:var(--bg);border:1px solid var(--line);transition:border-color .2s,transform .2s;color:var(--ink)}
+.mcard:hover{border-color:var(--lime);transform:translateY(-3px)}
+.mcard .kick{margin:0}
+.mcard b{font-family:'Montserrat';font-size:19px;line-height:1.25;color:var(--deep)}
+.mcard.dark{background:var(--deep);border-color:var(--deep)}
+.mcard.dark b{color:#fff}.mcard.dark .kick{color:var(--lime)}.mcard.dark .pmore{color:var(--lime)}
+/* sobre */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0 22px}
+.facts div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.facts b{display:block;font-family:'Montserrat';font-weight:800;color:var(--deep);font-size:14.5px}
+.facts span{font-size:13.5px;color:var(--muted)}
+.sobre-photo{height:clamp(220px,30vw,380px);border-radius:22px;margin-top:56px}
+/* método */
+.fr-card{display:flex;gap:26px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;margin-top:40px}
+.fr-card h3{font-size:clamp(20px,2.4vw,26px);color:var(--deep);margin:4px 0 10px}
+.fr-card p{color:var(--muted);font-size:15.5px;max-width:720px}
+.flags{display:flex;flex-direction:column;gap:6px;flex:0 0 auto}
+.flags span{display:block;width:64px;height:42px;border-radius:6px;box-shadow:0 4px 10px rgba(0,0,0,.12)}
+.flags .fr{background:linear-gradient(90deg,#1F3C8F 0 33.3%,#fff 33.3% 66.6%,#D7263D 66.6%)}
+.flags .br{background:radial-gradient(circle at 50% 50%,#1E3A8A 0 26%,transparent 27%),linear-gradient(135deg,transparent 30%,#F2C200 30% 70%,transparent 70%),linear-gradient(45deg,transparent 30%,#F2C200 30% 70%,transparent 70%),#1A8F3C}
+.uso-tab{margin-top:56px}
+.tabwrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:#fff}
+.uso-tab table{width:100%;border-collapse:collapse;font-size:15px;min-width:520px}
+.uso-tab th{text-align:left;background:var(--deep);color:#fff;font-family:'Montserrat';font-size:13px;padding:14px 18px}
+.uso-tab td{padding:14px 18px;border-top:1px solid var(--line);vertical-align:top}
+.uso-tab td b{color:var(--green);white-space:nowrap}
+.tabnote{font-size:13.5px;color:var(--muted);margin-top:10px}
+/* página do produto */
+.pdet{padding-top:48px}
+.back{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--green);margin-bottom:24px}
+.back:hover{color:var(--deep)}
+.pd-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start}
+.pd-media{position:sticky;top:calc(var(--navh,96px) + 16px)}
+.pd-media .plabel{border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(14,58,33,.12)}
+.pd-info .pcat{font-size:13px}
+.pd-info h1{font-family:'Montserrat';font-weight:900;font-size:clamp(32px,4vw,48px);color:var(--deep);margin:6px 0 6px}
+.pd-info .ptag{font-size:17px!important}
+.pd-block{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-top:14px}
+.pd-block b.lab{display:block;font-family:'Montserrat';font-style:italic;font-weight:800;color:var(--green);font-size:13px;margin-bottom:4px}
+.pd-block p{font-size:15.5px;color:var(--ink)}
+.pd-block.uso2{border-left:5px solid var(--lime)}
+.pd-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.pd-cta .btn{padding:14px 16px;font-size:14px}
+.pd-hint{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
+.more-h{font-size:clamp(22px,2.6vw,30px);color:var(--deep);margin:64px 0 20px}
+.cgrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:1080px){.cgrid4{grid-template-columns:repeat(2,1fr)}.mc{grid-template-columns:1fr}.pd-grid{grid-template-columns:1fr;gap:28px}.pd-media{position:static}.cgrid3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.cgrid4,.cgrid3{grid-template-columns:1fr 1fr;gap:12px}.pcbody{padding:12px 12px 14px}.pcbody h3{font-size:15.5px}.pcbody p{font-size:12.5px}.pcbody .pcat{font-size:10.5px}.pmore{font-size:12.5px;margin-top:6px}.pthumb{aspect-ratio:4/3!important}.facts{grid-template-columns:1fr}.fr-card{flex-direction:column;align-items:flex-start;padding:22px}.pd-cta{grid-template-columns:1fr}.pdet{padding-top:28px}.pthumb{aspect-ratio:2/1}}
+
+/* VeO */
+.veo-card{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px;margin-top:40px}
+.veo-img{background:#fff;border-radius:18px;display:grid;place-items:center}
+.veo-img img{width:100%;max-width:440px;height:auto}
+.veo-txt h3{font-size:clamp(22px,2.6vw,30px);color:var(--deep);margin:4px 0 12px}
+.veo-txt p{color:var(--muted);font-size:16px}
+.veo-txt p b{color:var(--deep)}
+.veo-list{list-style:none;margin-top:16px;display:grid;gap:8px}
+.veo-list li{position:relative;padding-left:26px;font-size:15px}
+.veo-list li::before{content:"";position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E3A21' stroke-width='4'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/10px no-repeat}
+.veo-badge{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-left:5px solid #3FAE49;border-radius:16px;padding:12px 16px;margin-top:14px;color:var(--ink);transition:border-color .2s}
+.veo-badge:hover{border-color:#3FAE49}
+.veo-badge img{width:96px;height:auto;flex:0 0 96px}
+.veo-badge b{display:block;font-family:'Montserrat';color:var(--deep);font-size:14.5px}
+.veo-badge span{font-size:13.5px;color:var(--muted)}
+.mcard.veo-m{background:#fff}.mcard.veo-m img{width:150px;height:auto;margin-bottom:4px}
+@media(max-width:900px){.veo-card{grid-template-columns:1fr;padding:22px;gap:18px}.veo-img img{max-width:340px}}
+@media(max-width:760px){.veo-badge img{width:78px;flex-basis:78px}}
+
+.pcard.contain .pthumb img{object-fit:contain;padding:14px;object-position:center}
+.pd-media .plabel img[src$="veo.jpg"]{padding:24px;background:#fff}
+@media(min-width:1081px){#plist{grid-template-columns:repeat(3,1fr)}}
+
+/* diferencial: método francês */
+.dif-band{background:linear-gradient(135deg,#0B2E19 0%,#134A2A 100%);color:#fff;position:relative;overflow:hidden}
+.dif-band::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(63,174,73,.25),transparent 65%);pointer-events:none}
+.dif-in{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative;z-index:1}
+.dif-txt .kick{color:var(--lime)}
+.dif-txt h2{font-size:clamp(28px,3.6vw,44px);font-weight:900;line-height:1.1;margin:6px 0 16px}
+.dif-txt p{font-size:17px;color:rgba(255,255,255,.85);max-width:600px}
+.dif-txt p b{color:#fff}
+.dif-list{list-style:none;display:grid;gap:10px;margin:22px 0 28px}
+.dif-list li{display:flex;gap:12px;align-items:center;font-size:16px;font-weight:600}
+.dif-list li span{flex:0 0 26px;height:26px;border-radius:50%;background:var(--lime);color:var(--deep);display:grid;place-items:center}
+.dif-list li span svg{width:14px;height:14px}
+.dif-cta{display:flex;flex-wrap:wrap;gap:12px}
+.dif-media{position:relative;justify-self:center;width:100%;max-width:460px}
+.dif-logo{background:#fff;border-radius:26px;padding:34px 26px;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.dif-logo img{width:100%;height:auto}
+.dif-flag{position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);white-space:nowrap;background:#fff;color:var(--deep);font-weight:800;font-size:13px;padding:8px 16px 8px 40px;border-radius:999px;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.dif-flag::before{content:"";position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:12px;border-radius:2px;background:linear-gradient(90deg,#1F3C8F 0 33.3%,#fff 33.3% 66.6%,#D7263D 66.6%);box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+.sobre-dif{margin-top:56px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:38px}
+.sd-head{display:flex;gap:24px;align-items:center;margin-bottom:14px}
+.sd-head img{width:170px;height:auto;flex:0 0 170px}
+.sd-head h2{font-size:clamp(26px,3.2vw,38px);font-weight:900;color:var(--deep);line-height:1.1;margin-top:4px}
+.sd-lead{font-size:16.5px;color:var(--muted);max-width:760px;margin-bottom:22px}
+.sd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sd-item{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:22px}
+.sd-item.hl{background:var(--deep);border-color:var(--deep);color:#fff}
+.sd-n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--deep);color:var(--lime);font-family:'Montserrat';font-weight:900;font-style:italic;margin-bottom:12px}
+.sd-item.hl .sd-n{background:var(--lime);color:var(--deep)}
+.sd-item h3{font-size:18px;color:var(--deep);margin-bottom:6px}
+.sd-item.hl h3{color:#fff}
+.sd-item p{font-size:14.5px;color:var(--muted)}
+.sd-item.hl p{color:rgba(255,255,255,.82)}
+.sd-foot{font-size:16px;color:var(--ink);margin:22px 0 20px;max-width:780px}
+.sd-foot b{color:var(--green)}
+@media(max-width:1080px){.dif-in{grid-template-columns:1fr;gap:44px}.dif-media{max-width:380px}}
+@media(max-width:760px){.sd-grid{grid-template-columns:1fr}.sobre-dif{padding:24px}.sd-head{flex-direction:column;align-items:flex-start;gap:12px}.sd-head img{width:140px;flex-basis:auto}.dif-logo{padding:24px 18px}}
+</style>
+</head>
+<body>
+
+
+<header><div class="wrap nav">
+  <a href="#inicio" class="brand"><img src="img/logo-alfabov.png" alt="Logo AlfaBov Saúde Animal"><div class="brand-txt"><span class="brand-name"><b>ALFABOV</b><small>SAÚDE ANIMAL</small></span><em class="brand-tag"><span class="tag-long">Nutrição e desempenho que transformam a pecuária</span><span class="tag-short">Nutrição e desempenho<br>para cada fase do gado</span></em></div></a>
+  <nav class="menu" id="menu">
+    <a href="#sobre">Sobre</a><a href="#metodo">Método</a><a href="#produtos">Produtos</a><a href="#contato">Contato</a>
+  </nav>
+  <a href="https://wa.me/5569992165821?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20da%20AlfaBov." target="_blank" rel="noopener" class="btn btn-wa nav-cta"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm7.4 18.3c-.3.9-1.8 1.7-2.5 1.8-.6.1-1.4.1-2.3-.1-.5-.2-1.2-.4-2.1-.8-3.7-1.6-6.1-5.3-6.3-5.6-.2-.2-1.5-2-1.5-3.8s.9-2.7 1.3-3.1c.3-.4.7-.4 1-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.6 1.1 2.8.1.2.2.4 0 .7l-.4.6-.5.6c-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1l1.2-1.4c.3-.4.5-.3.9-.2l2.5 1.2c.4.2.6.3.7.4.1.2.1.9-.2 1.7z"/></svg>Fale com um especialista</a>
+  <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+</div></header>
+
+<main class="view" data-view="inicio" id="v-inicio">
+<section class="hero" style="padding:0">
+  <div class="hero-bg" role="img" aria-label="Rebanho bovino em pastagem"></div>
+  <div class="wrap hero-in">
+    <div>
+      <h1>Tecnologia para o rebanho, <span>lucratividade para o seu bolso</span></h1>
+      <p>Especialistas em soluções nutricionais para bovinos: aditivos de alta qualidade e tecnologia para impulsionar os resultados da pecuária — da cria, recria e engorda.</p>
+      <div class="hero-cta">
+        <a href="#produtos" class="btn btn-lime">Ver os produtos</a>
+        <a href="#contato" class="btn btn-line">Falar com um representante</a>
+      </div>
+    </div>
+    <div class="bag">
+      <img src="img/saco-forte-cria.jpg" alt="Saco de 20 kg do suplemento Forte Cria da AlfaBov">
+      <div class="chip c1"><div class="ico" style="background:var(--lime-soft)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#17773A" stroke-width="2.4" stroke-linecap="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div><b>Registro MAPA</b>RO 000418-9</div></div>
+          </div>
+  </div>
+  </section>
+<section class="dif-band">
+  <div class="wrap dif-in">
+    <div class="dif-txt">
+      <span class="kick">O diferencial AlfaBov</span>
+      <h2>Um jeito diferente de tratar o rebanho, com tecnologia francesa</h2>
+      <p>Além da nutrição completa, a AlfaBov usa o <b>VeO</b>, uma tecnologia francesa com <b>ação calmante</b>. Ele atua no cérebro do animal, reduz o estresse e deixa o lote mais tranquilo. Boi calmo come melhor, aproveita mais o alimento e entrega <b>mais desempenho</b>.</p>
+      <ul class="dif-list">
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>Menos estresse no manejo e no confinamento</li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>Mais apetite e melhor aproveitamento do alimento</li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>Lotes mais tranquilos e mais ganho de peso</li>
+      </ul>
+      <div class="dif-cta"><a href="#produto-veo" class="btn btn-lime">Conhecer o VeO</a><a href="#metodo" class="btn btn-line">Ver o método</a></div>
+    </div>
+    <div class="dif-media"><div class="dif-logo"><img src="img/veo.jpg" alt="VeO — Melhor comportamento, melhor desempenho. Tecnologia francesa"></div><span class="dif-flag">Tecnologia francesa</span></div>
+  </div>
+</section>
+<section class="benef">
+  <div class="wrap benef-top">
+    <div class="head c">
+      <span class="kick">Por que suplementar</span>
+      <h2>Benefícios dos aditivos na alimentação bovina</h2>
+    </div>
+    <div class="bgrid">
+      <div class="bitem"><div class="ic" style="background:var(--lime-soft)"><svg viewBox="0 0 24 24" fill="none" stroke="#17773A" stroke-width="2.2" stroke-linecap="round"><path d="M4 20h16M7 16v-4M12 16V8M17 16V4"/></svg></div><h3>Ganho de peso</h3><p>Maior ganho médio diário (GMD) e animais de maior carcaça.</p></div>
+      <div class="bitem"><div class="ic" style="background:#FCEBC6"><svg viewBox="0 0 24 24" fill="none" stroke="#B37608" stroke-width="2.2" stroke-linecap="round"><path d="M12 3c4 3 6 6 6 9a6 6 0 01-12 0c0-3 2-6 6-9z"/><path d="M9.5 13l2 2 3.5-4"/></svg></div><h3>Saúde ruminal</h3><p>Probióticos que equilibram a microbiota e melhoram a digestão.</p></div>
+      <div class="bitem"><div class="ic" style="background:#DCEFF8"><svg viewBox="0 0 24 24" fill="none" stroke="#1579A8" stroke-width="2.2" stroke-linecap="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M12 9v6M9 12h6"/></svg></div><h3>Imunidade</h3><p>Proteção extra em períodos críticos como seca, geada e brotação.</p></div>
+      <div class="bitem"><div class="ic" style="background:#E4E3F3"><svg viewBox="0 0 24 24" fill="none" stroke="#26235E" stroke-width="2.2" stroke-linecap="round"><path d="M12 21V9M12 9c0-3 2-5 5-5 0 3-2 5-5 5zM12 13c0-3-2-5-5-5 0 3 2 5 5 5z"/><path d="M15 17l3-3 3 3"/></svg></div><h3>Eficiência alimentar</h3><p>Melhor aproveitamento dos nutrientes e da comida no cocho.</p></div>
+    </div>
+  </div>
+  <div class="band bgimg" style="background-image:url('img/30d1bc8ac8.jpg')" role="img" aria-label="Bois de corte em pastagem"></div>
+</section>
+<section class="destaque">
+  <div class="wrap">
+    <div class="head-row"><div class="head" style="margin:0"><span class="kick">Linha Forte</span><h2>O aditivo certo para cada fase</h2></div>
+      <a href="#produtos" class="btn btn-dark">Ver os 9 produtos</a></div>
+    <div class="cgrid4"><a class="pcard contain" href="#produto-veo" data-c="veo"><div class="pthumb"><img src="img/veo.jpg" alt="VeO, tecnologia francesa" loading="lazy"></div><div class="pcbody"><span class="pcat">Tecnologia francesa</span><h3>VeO</h3><p>Melhor comportamento, melhor desempenho</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-cria" data-c="repro"><div class="pthumb"><img src="img/788ef816c3.jpg" alt="Rótulo do Forte Cria" loading="lazy"></div><div class="pcbody"><span class="pcat">Reprodução</span><h3>Forte Cria</h3><p>Eleva a fertilidade e a eficiência reprodutiva</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-crescimento" data-c="cria"><div class="pthumb"><img src="img/2dc3703837.jpg" alt="Rótulo do Forte Crescimento" loading="lazy"></div><div class="pcbody"><span class="pcat">Cria e recria</span><h3>Forte Crescimento</h3><p>Alto desempenho no crescimento</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-engorda" data-c="engorda"><div class="pthumb"><img src="img/9a72f81200.jpg" alt="Rótulo do Forte Engorda" loading="lazy"></div><div class="pcbody"><span class="pcat">Terminação</span><h3>Forte Engorda</h3><p>Ganho de peso com animais mais tranquilos</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a></div>
+  </div>
+</section>
+<section class="mini-cta">
+  <div class="wrap mc">
+    <a href="#produto-veo" class="mcard veo-m"><img src="img/veo.jpg" alt="VeO, tecnologia francesa"><b>Tecnologia VeO francesa: melhor comportamento, melhor desempenho</b><span class="pmore">Conhecer o VeO →</span></a>
+    <a href="#sobre" class="mcard"><span class="kick">Quem somos</span><b>Referência em Rondônia, presente em todo o Brasil</b><span class="pmore">Conhecer a AlfaBov →</span></a>
+    <a href="#contato" class="mcard dark"><span class="kick">Atendimento</span><b>Fale com Lucas ou Leonardo pelo WhatsApp</b><span class="pmore">Ir para o contato →</span></a>
+  </div>
+</section>
+</main>
+<main class="view" data-view="sobre" id="v-sobre">
+<section class="sobre">
+  <div class="wrap sobre-grid" style="grid-template-columns:1fr;max-width:860px">
+    <div class="sobre-copy">
+      <span class="kick">Quem somos</span>
+      <h2 style="font-size:clamp(30px,4vw,46px);font-weight:900;color:var(--deep);margin-bottom:22px">Nutrição e desempenho que transformam a pecuária</h2>
+      <p>Na <strong>AlfaBov Saúde Animal</strong>, somos especialistas em soluções nutricionais para bovinos, oferecendo aditivos de alta qualidade e tecnologia para impulsionar os resultados da pecuária.</p>
+      <p>Atuamos em todas as fases da produção, <strong>da cria, recria e engorda</strong>, com soluções desenvolvidas para auxiliar no desempenho dos animais, melhorar a eficiência alimentar e aumentar a produtividade do rebanho.</p>
+      <p>Somos referência em Rondônia e ampliamos nossa presença em todo o Brasil.</p>
+      <div class="facts">
+        <div><b>Registro MAPA</b><span>RO 000418-9 — alimentação animal</span></div>
+        <div><b>Responsável técnico</b><span>Wagner Batista, CRMV 1059/RO</span></div>
+        <div><b>Atuação</b><span>Referência em Rondônia, presente em todo o Brasil</span></div>
+      </div>
+      <div class="btnrow"><a href="#produtos" class="btn btn-dark">Ver os produtos</a><a href="#contato" class="btn btn-ghost-dark">Fale com um representante</a></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="sobre-dif">
+      <div class="sd-head">
+        <img src="img/veo.jpg" alt="VeO, tecnologia francesa">
+        <div><span class="kick">Nosso diferencial</span><h2>Nutrição completa + tecnologia francesa</h2></div>
+      </div>
+      <p class="sd-lead">O que diferencia a AlfaBov é a forma de tratar o rebanho. Em vez de só suprir minerais, unimos em cada aditivo três frentes que trabalham juntas:</p>
+      <div class="sd-grid">
+        <div class="sd-item"><span class="sd-n">1</span><h3>Nutrição completa</h3><p>Minerais, vitaminas e aminoácidos nas quantidades certas para cada fase, da cria à engorda.</p></div>
+        <div class="sd-item"><span class="sd-n">2</span><h3>Saúde ruminal</h3><p>Probióticos e prebióticos que equilibram o rúmen e melhoram a digestão e a imunidade.</p></div>
+        <div class="sd-item hl"><span class="sd-n">3</span><h3>Comportamento com VeO</h3><p>Tecnologia francesa de ação calmante, que atua no cérebro, reduz o estresse e aumenta o desempenho.</p></div>
+      </div>
+      <p class="sd-foot">O resultado é um animal mais calmo, que come melhor e converte mais alimento em peso. É o que chamamos de <b>tecnologia para o rebanho, lucratividade para o seu bolso</b>.</p>
+      <div class="dif-cta"><a href="#produto-veo" class="btn btn-dark">Conhecer o VeO</a><a href="#produtos" class="btn btn-ghost-dark">Ver os produtos</a></div>
+    </div>
+  </div>
+  <div class="wrap"><div class="sobre-photo bgimg" style="background-image:url('img/30d1bc8ac8.jpg')" role="img" aria-label="Bois de corte em pastagem"></div></div>
+</section>
+</main>
+<main class="view" data-view="metodo" id="v-metodo">
+<section>
+  <div class="wrap metodo" style="grid-template-columns:1fr">
+    <div>
+      <div class="head" style="margin-bottom:34px">
+        <span class="kick">O método AlfaBov</span>
+        <h2>Do diagnóstico ao resultado no curral</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><div><h3>Entendemos a sua fase</h3><p>Reprodução, cria, recria, engorda ou período crítico: identificamos o momento do rebanho e o objetivo da propriedade.</p></div></div>
+        <div class="step"><div class="n">02</div><div><h3>Indicamos o aditivo Forte certo</h3><p>Cada produto da linha foi desenvolvido para uma necessidade — fertilidade, crescimento, acabamento, imunidade ou controle de moscas.</p></div></div>
+        <div class="step"><div class="n">03</div><div><h3>Mistura prática no sal</h3><p>4% no sal mineralizado, 2% em energéticos e proteinados ou 4 g por cabeça/dia na ração. Sem complicação no manejo.</p></div></div>
+              </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="veo-card">
+      <div class="veo-img"><img src="img/veo.jpg" alt="VeO — Melhor comportamento, melhor desempenho. Tecnologia francesa"></div>
+      <div class="veo-txt">
+        <span class="kick">Tecnologia francesa</span>
+        <h3>VeO: melhor comportamento, melhor desempenho</h3>
+        <p>O <b>VeO</b> é uma tecnologia francesa utilizada pela AlfaBov em suas fórmulas. Ele tem <b>ação calmante</b> nos animais: atua no cérebro, deixando o rebanho mais tranquilo, e assim proporciona <b>maior desempenho</b>.</p>
+        <ul class="veo-list">
+          <li>Ação cerebral calmante, com menos estresse no lote</li>
+          <li>Apoio ao apetite e ao aproveitamento do alimento</li>
+          <li>Também presente nas fórmulas do Forte Cria, Forte Crescimento, Forte Engorda e Forte Mix 40</li>
+        </ul>
+        <a href="#produto-veo" class="btn btn-dark" style="margin-top:20px">Ver o produto VeO</a>
+      </div>
+    </div>
+    <div class="uso-tab">
+      <div class="head" style="margin:0 0 20px"><span class="kick">Como usar no dia a dia</span><h2 style="font-size:clamp(26px,3.2vw,38px)">Dosagem simples, direto no cocho</h2></div>
+      <div class="tabwrap"><table>
+        <thead><tr><th>Onde misturar</th><th>Quantidade</th><th>Produtos</th></tr></thead>
+        <tbody>
+          <tr><td>Sal mineralizado</td><td><b>4%</b></td><td>Cria, Crescimento, Mix 40, ADE, Rodeio e Equino</td></tr>
+          <tr><td>Energéticos e proteinados</td><td><b>2%</b></td><td>Cria, Crescimento, Mix 40, ADE, Rodeio e Equino</td></tr>
+          <tr><td>Ração</td><td><b>4 g por cabeça/dia</b></td><td>Toda a linha bovina, incluindo o Forte Engorda</td></tr>
+          <tr><td>Sal mineralizado (concentrado)</td><td><b>0,5 kg por saco</b></td><td>Forte Mix 112</td></tr>
+          <tr><td>Aves e suínos</td><td><b>1 kg por tonelada de ração</b></td><td>Forte ADE</td></tr>
+        </tbody>
+      </table></div>
+      <p class="tabnote">Confira o modo de usar completo na página de cada produto.</p>
+      <a href="#produtos" class="btn btn-dark" style="margin-top:22px">Ver os produtos</a>
+    </div>
+  </div>
+</section>
+</main>
+<main class="view" data-view="produtos" id="v-produtos">
+<section class="sol">
+  <div class="wrap">
+    <div class="head">
+      <span class="kick">Produtos</span>
+      <h2>Linha Forte: o aditivo certo para cada parte do seu rebanho</h2>
+      <p>Toque em um produto para ver a descrição completa, o modo de usar e o rótulo ampliado. Todos em sacos de 20 kg.</p>
+    </div>
+    <div class="filters" id="filters">
+      <button class="fbtn on" data-f="all">Todos</button>
+      <button class="fbtn" data-f="repro">Reprodução</button>
+      <button class="fbtn" data-f="cria">Cria e recria</button>
+      <button class="fbtn" data-f="engorda">Engorda</button>
+      <button class="fbtn" data-f="imune">Imunidade e vitaminas</button>
+      <button class="fbtn" data-f="perf">Performance</button>
+      <button class="fbtn" data-f="veo">Tecnologia VeO</button>
+    </div>
+    <div class="cgrid4" id="plist"><a class="pcard contain" href="#produto-veo" data-c="veo"><div class="pthumb"><img src="img/veo.jpg" alt="VeO, tecnologia francesa" loading="lazy"></div><div class="pcbody"><span class="pcat">Tecnologia francesa</span><h3>VeO</h3><p>Melhor comportamento, melhor desempenho</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-cria" data-c="repro"><div class="pthumb"><img src="img/788ef816c3.jpg" alt="Rótulo do Forte Cria" loading="lazy"></div><div class="pcbody"><span class="pcat">Reprodução</span><h3>Forte Cria</h3><p>Eleva a fertilidade e a eficiência reprodutiva</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-crescimento" data-c="cria"><div class="pthumb"><img src="img/2dc3703837.jpg" alt="Rótulo do Forte Crescimento" loading="lazy"></div><div class="pcbody"><span class="pcat">Cria e recria</span><h3>Forte Crescimento</h3><p>Alto desempenho no crescimento</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-engorda" data-c="engorda"><div class="pthumb"><img src="img/9a72f81200.jpg" alt="Rótulo do Forte Engorda" loading="lazy"></div><div class="pcbody"><span class="pcat">Terminação</span><h3>Forte Engorda</h3><p>Ganho de peso com animais mais tranquilos</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-mix-40" data-c="imune"><div class="pthumb"><img src="img/e376eeefc4.jpg" alt="Rótulo do Forte Mix 40" loading="lazy"></div><div class="pcbody"><span class="pcat">Imunidade</span><h3>Forte Mix 40</h3><p>Produzindo forte</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-mix-112" data-c="imune"><div class="pthumb"><img src="img/6f917126cc.jpg" alt="Rótulo do Forte Mix 112" loading="lazy"></div><div class="pcbody"><span class="pcat">Imunidade</span><h3>Forte Mix 112</h3><p>Versão concentrada para bovinos, ovinos e caprinos</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-ade" data-c="imune"><div class="pthumb"><img src="img/6359548a15.jpg" alt="Rótulo do Forte ADE" loading="lazy"></div><div class="pcbody"><span class="pcat">Vitaminas</span><h3>Forte ADE</h3><p>Fonte de vitaminas A, D e E</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-rodeio" data-c="perf"><div class="pthumb"><img src="img/ffe0f0f9f9.jpg" alt="Rótulo do Forte Rodeio" loading="lazy"></div><div class="pcbody"><span class="pcat">Performance — bovinos</span><h3>Forte Rodeio</h3><p>Performance, resistência e recuperação</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a><a class="pcard" href="#produto-forte-equino" data-c="perf"><div class="pthumb"><img src="img/c4ba5545b4.jpg" alt="Rótulo do Forte Equino" loading="lazy"></div><div class="pcbody"><span class="pcat">Performance — equinos</span><h3>Forte Equino</h3><p>Dedicação no ofício. Glória no pódio.</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a></div>
+  </div>
+</section>
+</main>
+<main class="view" data-view="produto" id="v-produto">
+<section class="pdet"><div class="wrap" id="pdet"></div></section>
+</main>
+<main class="view" data-view="contato" id="v-contato">
+<section class="contato">
+  <div class="wrap">
+    <div class="head">
+      <span class="kick">Contato</span>
+      <h2>Entre em contato com a AlfaBov!</h2>
+      <p>Nossa equipe está pronta para atender você e apresentar as melhores soluções em aditivos para a nutrição e o desempenho do seu rebanho. Fale diretamente com um de nossos representantes.</p>
+    </div>
+    <div class="cgrid">
+      <div>
+        <div class="walist">
+          <a class="walink" target="_blank" rel="noopener" href="https://wa.me/5569992165821?text=Ol%C3%A1!%20Quero%20conhecer%20as%20solu%C3%A7%C3%B5es%20da%20AlfaBov%20para%20meu%20rebanho."><div class="wic"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm7.4 18.3c-.3.9-1.8 1.7-2.5 1.8-.6.1-1.4.1-2.3-.1-.5-.2-1.2-.4-2.1-.8-3.7-1.6-6.1-5.3-6.3-5.6-.2-.2-1.5-2-1.5-3.8s.9-2.7 1.3-3.1c.3-.4.7-.4 1-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.6 1.1 2.8.1.2.2.4 0 .7l-.4.6-.5.6c-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1l1.2-1.4c.3-.4.5-.3.9-.2l2.5 1.2c.4.2.6.3.7.4.1.2.1.9-.2 1.7z"/></svg></div><div><b>Lucas — (69) 99216-5821</b><span>Representante · Telefone e WhatsApp</span></div><span class="go">Abrir →</span></a>
+          <a class="walink" target="_blank" rel="noopener" href="https://wa.me/5543996052006?text=Ol%C3%A1!%20Quero%20conhecer%20as%20solu%C3%A7%C3%B5es%20da%20AlfaBov%20para%20meu%20rebanho."><div class="wic"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm7.4 18.3c-.3.9-1.8 1.7-2.5 1.8-.6.1-1.4.1-2.3-.1-.5-.2-1.2-.4-2.1-.8-3.7-1.6-6.1-5.3-6.3-5.6-.2-.2-1.5-2-1.5-3.8s.9-2.7 1.3-3.1c.3-.4.7-.4 1-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.6 1.1 2.8.1.2.2.4 0 .7l-.4.6-.5.6c-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1l1.2-1.4c.3-.4.5-.3.9-.2l2.5 1.2c.4.2.6.3.7.4.1.2.1.9-.2 1.7z"/></svg></div><div><b>Leonardo — (43) 99605-2006</b><span>Representante · Telefone e WhatsApp</span></div><span class="go">Abrir →</span></a>
+        </div>
+        <div class="cinfo">
+          <div class="crow"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></div><div><small>Telefones / WhatsApp</small><b>Lucas: (69) 99216-5821<br>Leonardo: (43) 99605-2006</b></div></div><div class="crow"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><small>E-mail</small><b><a href="mailto:alfabovsaudeanimal@gmail.com">alfabovsaudeanimal@gmail.com</a></b></div></div>
+          <div class="crow"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></div><div><small>Instagram</small><b><a href="https://www.instagram.com/alfabovsaudeanimal" target="_blank" rel="noopener">@alfabovsaudeanimal</a></b></div></div>
+        </div>
+      </div>
+      <form class="cform" id="cform">
+        <h3>Solicite um atendimento</h3>
+        <p>Preencha os campos e sua mensagem abrirá pronta no WhatsApp da AlfaBov.</p>
+        <div class="row2">
+          <div class="f"><label for="nome">Nome</label><input id="nome" required placeholder="Seu nome"></div>
+          <div class="f"><label for="cidade">Cidade</label><input id="cidade" placeholder="Ex: Cacoal/RO"></div>
+        </div>
+        <div class="f"><label for="rep">Enviar para</label><select id="rep"><option value="5569992165821">Lucas — (69) 99216-5821</option><option value="5543996052006">Leonardo — (43) 99605-2006</option></select></div>
+        <div class="f"><label for="msg">Mensagem</label><textarea id="msg" placeholder="Conte o que você precisa"></textarea></div>
+        <button type="submit" class="btn btn-wa"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm7.4 18.3c-.3.9-1.8 1.7-2.5 1.8-.6.1-1.4.1-2.3-.1-.5-.2-1.2-.4-2.1-.8-3.7-1.6-6.1-5.3-6.3-5.6-.2-.2-1.5-2-1.5-3.8s.9-2.7 1.3-3.1c.3-.4.7-.4 1-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.6 1.1 2.8.1.2.2.4 0 .7l-.4.6-.5.6c-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1l1.2-1.4c.3-.4.5-.3.9-.2l2.5 1.2c.4.2.6.3.7.4.1.2.1.9-.2 1.7z"/></svg>Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fgrid" style="grid-template-columns:1.4fr 1fr 1fr">
+    <div><a href="#inicio" class="brand"><img src="img/logo-alfabov.png" alt=""><div><span class="brand-name"><b>ALFABOV</b><small style="color:var(--lime)">SAÚDE ANIMAL</small></span></div></a>
+      <p style="font-size:14px;margin-top:16px;max-width:320px">Tecnologia, qualidade e desempenho para quem busca resultados de verdade no campo.</p>
+      <div class="selo"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B4CC2B" stroke-width="2"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Estabelecimento registrado no MAPA</b>RO 000418-9 — Alimentação animal</div></div>
+    </div>
+    <div><h5>Navegação</h5><ul><li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#metodo">Método</a></li><li><a href="#produtos">Produtos</a></li><li><a href="#contato">Contato</a></li></ul></div>
+    <div><h5>Contato</h5><ul><li><a href="https://wa.me/5569992165821" target="_blank" rel="noopener">Lucas: (69) 99216-5821</a></li><li><a href="https://wa.me/5543996052006" target="_blank" rel="noopener">Leonardo: (43) 99605-2006</a></li><li><a href="mailto:alfabovsaudeanimal@gmail.com">alfabovsaudeanimal@gmail.com</a></li><li><a href="https://www.instagram.com/alfabovsaudeanimal" target="_blank" rel="noopener">@alfabovsaudeanimal</a></li><li>Rondônia</li><li>Resp. técnico: Wagner Batista, CRMV 1059/RO</li></ul></div>
+  </div>
+  <div class="fbot"><span>© 2026 AlfaBov Saúde Animal LTDA. Todos os direitos reservados.</span><span>Do campo aos resultados, excelência em cada etapa da pecuária!</span></div>
+</div></footer>
+
+<script>
+const PRODS=[{"id": "produto-veo", "c": "veo", "img": "img/veo.jpg", "nome": "VeO", "cat": "Tecnologia francesa", "tag": "Melhor comportamento, melhor desempenho", "desc": "O VeO é uma tecnologia francesa utilizada pela AlfaBov. Ele tem ação calmante nos animais: atua no cérebro e deixa o rebanho mais tranquilo, proporcionando maior desempenho.", "ind": "Para rebanhos que precisam de mais calma e melhor comportamento, com menos estresse no manejo, no confinamento e na convivência dos lotes, refletindo em maior desempenho dos animais.", "uso": "Consulte um de nossos representantes para receber a dosagem e a forma de uso indicadas para o seu rebanho.", "contain": true, "kg": ""}, {"id": "produto-forte-cria", "c": "repro", "img": "img/788ef816c3.jpg", "nome": "Forte Cria", "veo": true, "cat": "Reprodução", "tag": "Eleva a fertilidade e a eficiência reprodutiva", "desc": "Suplemento vitamínico-mineral com probióticos e moléculas de VeO, que apoia o apetite e reduz o estresse em bovinos em reprodução.", "ind": "Monta natural, estação e IATF. Sincroniza o cio e a fertilidade nas vacas. Maior eficiência dos touros. Diminui o intervalo entre partos, diminui a porcentagem de morte embrionária e aumenta o peso na desmama dos bezerros.", "uso": "Misturar ao sal mineralizado na proporção de 4%. Energéticos e proteinados: 2%. Rações: 4 g por cab/dia. Estação de monta: usar 30 dias antes do início e durante todo o período."}, {"id": "produto-forte-crescimento", "c": "cria", "img": "img/2dc3703837.jpg", "nome": "Forte Crescimento", "veo": true, "cat": "Cria e recria", "tag": "Alto desempenho no crescimento", "desc": "Suplemento vitamínico-mineral com probióticos e moléculas de VeO, que apoia o apetite e reduz o estresse em bovinos em crescimento.", "ind": "Creep feeding: transição mais precoce de monogástrico para ruminante, aumentando a média de peso no desmame. Recria: maior crescimento de carcaça, aumento do Ganho Médio Diário (GMD), precocidade no período de recria e animais de maior carcaça.", "uso": "Bezerro desmamado e bezerro ao pé da vaca: misturar ao sal mineralizado na proporção de 4%. Suplementos energéticos e proteinados: 2%. Rações creep feeding: 4 g por cab/dia."}, {"id": "produto-forte-engorda", "c": "engorda", "img": "img/9a72f81200.jpg", "nome": "Forte Engorda", "veo": true, "cat": "Terminação", "tag": "Ganho de peso com animais mais tranquilos", "desc": "Suplemento vitamínico-mineral com probióticos e moléculas de VeO, que apoia o apetite e reduz o estresse em bovinos confinados e semiconfinados.", "ind": "Melhora a convivência dos lotes, aumenta o Ganho Médio Diário (GMD), diminui a taxa de passagem de grãos e favorece a engorda, o acabamento de carcaça e a formação da capa de gordura.", "uso": "Rações: 4 g por cab/dia."}, {"id": "produto-forte-mix-40", "c": "imune", "img": "img/e376eeefc4.jpg", "nome": "Forte Mix 40", "veo": true, "cat": "Imunidade", "tag": "Produzindo forte", "desc": "Suplemento mineral com promotor de crescimento e eficiência alimentar para bovinos, ovinos e caprinos.", "ind": "Aumento da imunidade dos animais em períodos críticos: geada, seca e brotação. Ajuda a prevenir pneumonia, erisipela, enterite bacteriana, artrite infecciosa e feridas infecciosas (peladeira, requeima), infecções pré e pós-parto.", "uso": "Misturar ao sal mineralizado na proporção de 4%. Energéticos e proteinados: 2%. Desmame e brotação: 4% no sal mineralizado. Rações: 4 g por cab/dia."}, {"id": "produto-forte-mix-112", "c": "imune", "img": "img/6f917126cc.jpg", "nome": "Forte Mix 112", "cat": "Imunidade", "tag": "Versão concentrada para bovinos, ovinos e caprinos", "desc": "Suplemento mineral com promotor de crescimento e eficiência alimentar para bovinos, ovinos e caprinos.", "ind": "Aumento da imunidade dos animais em períodos críticos: geada, seca e brotação. Ajuda a prevenir pneumonia, erisipela, enterite bacteriana, artrite infecciosa e feridas infecciosas (peladeira, requeima), infecções pré e pós-parto.", "uso": "Misturar um pacote de 0,500 kg em um saco de sal mineralizado. Tratamento individual: 1 g de Forte Mix 112 para cada 35 kg de peso corporal, durante 7 dias. Ração: 0,500 kg para cada tonelada."}, {"id": "produto-forte-ade", "c": "imune", "img": "img/6359548a15.jpg", "nome": "Forte ADE", "cat": "Vitaminas", "tag": "Fonte de vitaminas A, D e E", "desc": "Suplemento vitamínico, com prebiótico, para bovinos, ovinos, caprinos, suínos, equinos e aves.", "ind": "Fonte de vitaminas A, D e E. Previne doenças carenciais, estimula o crescimento, auxilia no ganho de peso e supre as reservas vitamínicas em fases difíceis do ano, para bovinos, ovinos, caprinos, suínos, equinos e aves.", "uso": "Misturar ao sal mineralizado na proporção de 4%. Energéticos e proteinados: 2%. Rações: 4 g por cab/dia. Aves e suínos: 1 kg por tonelada de ração."}, {"id": "produto-forte-rodeio", "c": "perf", "img": "img/ffe0f0f9f9.jpg", "nome": "Forte Rodeio", "cat": "Performance — bovinos", "tag": "Performance, resistência e recuperação", "desc": "Suplemento vitamínico, mineral e de aminoácidos, com probiótico, para bovinos.", "ind": "Mais força, explosão e resistência. Recuperação muscular acelerada. Ossos e cascos mais firmes. Melhor digestão e aproveitamento dos nutrientes. Imunidade alta, prevenindo doenças. Pelo brilhante e boa apresentação no brete.", "uso": "Misturar ao sal mineralizado na proporção de 4%. Energéticos e proteinados: 2%. Rações: 4 g por cabeça/dia."}, {"id": "produto-forte-equino", "c": "perf", "img": "img/c4ba5545b4.jpg", "nome": "Forte Equino", "cat": "Performance — equinos", "tag": "Dedicação no ofício. Glória no pódio.", "desc": "Suplemento vitamínico, mineral e de aminoácidos, com probiótico, para equinos.", "ind": "Estimula o desempenho nos esportes mantendo a saúde e o brilho dos pelos. Melhora a fertilidade e o desempenho de éguas e garanhões. Aumenta o vigor nos animais de trabalho. Controla o carrapato da orelha (Otobius megnini) e diminui a incidência de distúrbios alimentares (cólicas).", "uso": "Misturar ao sal mineralizado na proporção de 4%. Energéticos e proteinados: 2%. Rações: 4 g por cabeça/dia."}];
+
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.onclick=()=>menu.classList.toggle('open');
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+document.querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  const f=b.dataset.f;document.querySelectorAll('#plist .pcard').forEach(p=>p.classList.toggle('hide',f!=='all'&&!p.dataset.c.split(' ').includes(f)));
+});
+document.getElementById('cform').onsubmit=e=>{e.preventDefault();const v=id=>document.getElementById(id).value.trim();
+  const t=`Olá, AlfaBov! Meu nome é ${v('nome')}${v('cidade')?' ('+v('cidade')+')':''}.\n\n${v('msg')}`;
+  window.open('https://wa.me/'+document.getElementById('rep').value+'?text='+encodeURIComponent(t),'_blank');};
+document.body.insertAdjacentHTML('beforeend','<div class="lbx" id="lbx" role="dialog" aria-modal="true"><div class="lbx-bar"><span id="lbxT"></span><button id="zOut" aria-label="Diminuir zoom">−</button><div class="zl" id="zL">100%</div><button id="zIn" aria-label="Aumentar zoom">+</button><button id="zX" aria-label="Fechar" style="background:#B4CC2B;color:#0E3A21;border:0">×</button></div><div class="lbx-stage" id="lbxS"><img id="lbxI" alt=""></div><div class="lbx-hint">Use + e −, dê dois toques ou faça o movimento de pinça para ampliar. Arraste para mover.</div></div>');
+const lbx=document.getElementById('lbx'),st=document.getElementById('lbxS'),li=document.getElementById('lbxI'),zL=document.getElementById('zL');
+let z=1,fitW=0;
+function fit(){fitW=Math.max(200,st.clientWidth-20)}
+function setZ(nz,cx,cy){
+  nz=Math.min(5,Math.max(1,nz));
+  const r=st.getBoundingClientRect();cx=cx??r.width/2;cy=cy??r.height/2;
+  const px=(st.scrollLeft+cx)/(li.offsetWidth||1),py=(st.scrollTop+cy)/(li.offsetHeight||1);
+  z=nz;li.style.width=(fitW*z)+'px';zL.textContent=Math.round(z*100)+'%';
+  st.scrollLeft=px*li.offsetWidth-cx;st.scrollTop=py*li.offsetHeight-cy;
+}
+document.addEventListener('click',e=>{const b=e.target.closest('.plabel');if(!b)return;
+  const im=b.querySelector('img');li.src=im.src;li.alt=im.alt;document.getElementById('lbxT').textContent=im.alt;
+  lbx.classList.add('on');document.body.style.overflow='hidden';
+  requestAnimationFrame(()=>{fit();z=1;setZ(innerWidth<760?2.2:1.2,0,0);st.scrollLeft=0;st.scrollTop=0});
+});
+function closeL(){lbx.classList.remove('on');document.body.style.overflow=''}
+document.getElementById('zX').onclick=closeL;
+document.getElementById('zIn').onclick=()=>setZ(z+.5);
+document.getElementById('zOut').onclick=()=>setZ(z-.5);
+addEventListener('keydown',e=>{if(!lbx.classList.contains('on'))return;if(e.key==='Escape')closeL();if(e.key==='+'||e.key==='=')setZ(z+.5);if(e.key==='-')setZ(z-.5)});
+addEventListener('resize',()=>{if(lbx.classList.contains('on')){fit();setZ(z)}});
+st.addEventListener('wheel',e=>{if(e.ctrlKey){e.preventDefault();const r=st.getBoundingClientRect();setZ(z*(e.deltaY<0?1.15:.87),e.clientX-r.left,e.clientY-r.top)}},{passive:false});
+let lastTap=0;
+li.addEventListener('dblclick',e=>{const r=st.getBoundingClientRect();setZ(z<2?2.5:1,e.clientX-r.left,e.clientY-r.top)});
+let pd=0,pz=1;
+st.addEventListener('touchstart',e=>{
+  if(e.touches.length===2){pd=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);pz=z}
+  else if(e.touches.length===1){const n=Date.now();if(n-lastTap<300){const r=st.getBoundingClientRect();setZ(z<2?2.5:1,e.touches[0].clientX-r.left,e.touches[0].clientY-r.top);e.preventDefault()}lastTap=n}
+},{passive:false});
+st.addEventListener('touchmove',e=>{if(e.touches.length===2&&pd){e.preventDefault();const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);const r=st.getBoundingClientRect();setZ(pz*d/pd,(e.touches[0].clientX+e.touches[1].clientX)/2-r.left,(e.touches[0].clientY+e.touches[1].clientY)/2-r.top)}},{passive:false});
+st.addEventListener('touchend',e=>{if(e.touches.length<2)pd=0});
+const hdr=document.querySelector('header');
+let small=false,ticking=false;
+function onS(){if(ticking)return;ticking=true;requestAnimationFrame(()=>{ticking=false;const y=scrollY;
+  /* encolhe só depois de descer bem e volta só perto do topo, para não ficar alternando */
+  if(!small&&y>60){small=true}else if(small&&y<20){small=false}
+  if(hdr.classList.contains('compact')!==small){hdr.classList.toggle('compact',small);document.documentElement.style.setProperty('--navh',(small?(innerWidth<=760?66:72):(innerWidth<=760?146:176))+'px')}})}
+addEventListener('scroll',onS,{passive:true});onS();
+
+const WA_SVG="<svg viewBox=\"0 0 32 32\" fill=\"currentColor\"><path d=\"M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm7.4 18.3c-.3.9-1.8 1.7-2.5 1.8-.6.1-1.4.1-2.3-.1-.5-.2-1.2-.4-2.1-.8-3.7-1.6-6.1-5.3-6.3-5.6-.2-.2-1.5-2-1.5-3.8s.9-2.7 1.3-3.1c.3-.4.7-.4 1-.4h.7c.2 0 .5-.1.8.6.3.8 1 2.6 1.1 2.8.1.2.2.4 0 .7l-.4.6-.5.6c-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1l1.2-1.4c.3-.4.5-.3.9-.2l2.5 1.2c.4.2.6.3.7.4.1.2.1.9-.2 1.7z\"/></svg>";
+function waLink(num,nome){return 'https://wa.me/'+num+'?text='+encodeURIComponent('Olá! Tenho interesse no '+nome+' da AlfaBov.')}
+function cardHTML(p){return '<a class="pcard'+(p.contain?' contain':'')+'" href="#'+p.id+'"><div class="pthumb"><img src="'+p.img+'" alt="Rótulo do '+p.nome+'" loading="lazy"></div><div class="pcbody"><span class="pcat">'+p.cat+'</span><h3>'+p.nome+'</h3><p>'+p.tag+'</p><span class="pmore">Ver produto <span aria-hidden="true">→</span></span></div></a>'}
+function renderProduto(p){
+  const i=PRODS.indexOf(p);const outros=[1,2,3].map(k=>PRODS[(i+k)%PRODS.length]);
+  document.getElementById('pdet').innerHTML=
+   '<a href="#produtos" class="back">← Todos os produtos</a>'+
+   '<div class="pd-grid"><div class="pd-media"><button class="plabel" type="button" aria-label="Ampliar rótulo do '+p.nome+'"><img src="'+p.img+'" alt="Rótulo do '+p.nome+'"><span class="zoom">'+(p.contain?'🔍 Ampliar':'🔍 Ampliar rótulo')+'</span></button>'+(p.contain?'':'<p class="pd-hint">Toque no rótulo para ampliar e ler a tabela de níveis de garantia.</p>')+'</div>'+
+   '<div class="pd-info"><span class="pcat">'+p.cat+(p.contain?'':' · Saco de 20 kg')+'</span><h1>'+p.nome+'</h1><p class="ptag">'+p.tag+'</p>'+
+   (p.veo?'<a class="veo-badge" href="#produto-veo"><img src="img/veo.jpg" alt="VeO"><span><b>Com tecnologia VeO francesa</b>Ação calmante que proporciona maior desempenho. Ver o produto →</span></a>':'')+'<div class="pd-block"><b class="lab">Descrição do produto</b><p>'+p.desc+'</p></div>'+
+   '<div class="pd-block"><b class="lab">Indicação</b><p>'+p.ind+'</p></div>'+
+   '<div class="pd-block uso2"><b class="lab">Modo de usar</b><p>'+p.uso+'</p></div>'+
+   '<div class="pd-cta"><a class="btn btn-wa" target="_blank" rel="noopener" href="'+waLink('5569992165821',p.nome)+'">'+WA_SVG+'Pedir com Lucas</a><a class="btn btn-wa" target="_blank" rel="noopener" href="'+waLink('5543996052006',p.nome)+'">'+WA_SVG+'Pedir com Leonardo</a></div>'+
+   '</div></div><h2 class="more-h">Veja também</h2><div class="cgrid3">'+outros.map(cardHTML).join('')+'</div>';
+}
+const VIEWS=[...document.querySelectorAll('.view')];
+const TITLES={inicio:'AlfaBov Saúde Animal',sobre:'Sobre — AlfaBov',metodo:'Método — AlfaBov',produtos:'Produtos — AlfaBov',contato:'Contato — AlfaBov'};
+function route(){
+  let h=(location.hash||'#inicio').slice(1);let name=h;
+  if(h.indexOf('produto-')===0){const p=PRODS.find(x=>x.id===h);if(p){renderProduto(p);name='produto';document.title=p.nome+' — AlfaBov'}else name='produtos'}
+  if(!VIEWS.some(v=>v.dataset.view===name))name='inicio';
+  VIEWS.forEach(v=>v.classList.toggle('on',v.dataset.view===name));
+  if(TITLES[name])document.title=TITLES[name];
+  const active=name==='produto'?'produtos':name;
+  document.querySelectorAll('#menu a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+active));
+  menu.classList.remove('open');
+  window.scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a&&a.getAttribute('href')===location.hash){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}});
+</script>
+
+</body>
+</html>
