@@ -58,7 +58,10 @@ header{overflow-anchor:none;position:sticky;top:0;z-index:80;background:rgba(255
 
 /* hero */
 .hero{position:relative;color:#fff;overflow:hidden;background:var(--deep)}
-.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1716819487547-913db6986792?auto=format&fit=crop&w=2200&q=80');background-size:cover;background-position:center 65%}
+.hero-bg{position:absolute;inset:0;background-image:url('img/nelore.jpg');background-size:cover;background-position:62% 30%}
+.hero::before{background:linear-gradient(100deg,rgba(9,40,22,.94) 0%,rgba(9,40,22,.78) 38%,rgba(9,40,22,.25) 70%,rgba(9,40,22,.1) 100%)!important}
+@media(min-width:1081px){.hero-bg{left:38%;background-position:center 22%}.hero{background:#0B2E19}.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0B2E19 0%,rgba(11,46,25,0) 30%)}.hero-in{grid-template-columns:1.2fr .8fr!important}.bag{max-width:300px;justify-self:end}}
+@media(max-width:1080px){.hero-bg{background-position:70% 20%}}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(9,40,22,.95) 0%,rgba(9,40,22,.8) 45%,rgba(9,40,22,.35) 100%)}
 .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:80px;padding-bottom:60px}
 .tag{display:inline-flex;align-items:center;gap:10px;background:rgba(180,204,43,.16);border:1px solid rgba(180,204,43,.45);color:var(--lime);padding:8px 16px;border-radius:999px;font-size:13.5px;font-weight:700}
