@@ -1,3 +1,50 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/veo",
+      "destination": "/?origem=qr-embalagem#produto-veo",
+      "permanent": false
+    },
+    {
+      "source": "/forte-cria",
+      "destination": "/?origem=qr-embalagem#produto-forte-cria",
+      "permanent": false
+    },
+    {
+      "source": "/forte-crescimento",
+      "destination": "/?origem=qr-embalagem#produto-forte-crescimento",
+      "permanent": false
+    },
+    {
+      "source": "/forte-engorda",
+      "destination": "/?origem=qr-embalagem#produto-forte-engorda",
+      "permanent": false
+    },
+    {
+      "source": "/forte-mix-40",
+      "destination": "/?origem=qr-embalagem#produto-forte-mix-40",
+      "permanent": false
+    },
+    {
+      "source": "/forte-mix-112",
+      "destination": "/?origem=qr-embalagem#produto-forte-mix-112",
+      "permanent": false
+    },
+    {
+      "source": "/forte-ade",
+      "destination": "/?origem=qr-embalagem#produto-forte-ade",
+      "permanent": false
+    },
+    {
+      "source": "/forte-rodeio",
+      "destination": "/?origem=qr-embalagem#produto-forte-rodeio",
+      "permanent": false
+    },
+    {
+      "source": "/forte-equino",
+      "destination": "/?origem=qr-embalagem#produto-forte-equino",
+      "permanent": false
+    }
+  ]
 }
